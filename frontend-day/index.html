@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Frontend Day — навчальна сторінка IT-зустрічі з реєстрацією та калькулятором квитків.">
+  <meta name="theme-color" content="#f6f4ed">
+  <title>Frontend Day — твій наступний крок у вебі</title>
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="visually-hidden-focusable skip-link" href="#main">Перейти до вмісту</a>
+  <header class="site-header">
+    <nav class="container d-flex align-items-center justify-content-between gap-3" aria-label="Головна навігація">
+      <a class="brand" href="#"><span class="brand-symbol" aria-hidden="true">f.</span> frontend day<span class="brand-year"> / 2026</span></a>
+      <div class="d-flex align-items-center gap-4">
+        <a class="nav-link d-none d-md-block" href="#about">Про подію</a>
+        <a class="nav-link d-none d-md-block" href="#tickets">Квитки</a>
+        <a class="btn btn-dark btn-sm" href="#registration">Долучитися <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero container" id="about" aria-labelledby="hero-title">
+      <div class="row align-items-center gy-5 gx-lg-5">
+        <div class="col-lg-7">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> IT-ЗУСТРІЧ ДЛЯ ТИХ, ХТО СТВОРЮЄ</p>
+          <h1 id="hero-title">Ідеї стають<br>сайтами<span class="orange">.</span></h1>
+          <p class="hero-description">Один день, щоб розібратися у веброзробці, написати свій перший інтерактивний сайт і знайти людей на одній хвилі.</p>
+          <div class="event-details d-flex flex-wrap gap-4">
+            <div><span class="detail-label">КОЛИ</span><strong><time datetime="2026-12-12T10:00:00+02:00">12 грудня 2026 · 10:00</time></strong></div>
+            <div><span class="detail-label">ДЕ</span><strong>Київ · простір «Код»</strong></div>
+          </div>
+          <a class="btn btn-accent hero-cta" href="#tickets">Обрати свій квиток <span aria-hidden="true">↗</span></a>
+          <p class="demo-note">Навчальний проєкт. Подія та місце — вигадані.</p>
+        </div>
+        <div class="col-lg-5">
+          <div class="event-poster" aria-label="Frontend Day, 12 грудня 2026. Код, практика та спільнота.">
+            <div class="poster-top"><span>FRONTEND<br>DAY / 26</span><span class="poster-arrow" aria-hidden="true">↗</span></div>
+            <div class="code-art" aria-hidden="true"><span>{</span><span class="code-star">✳</span><span>}</span></div>
+            <div class="poster-bottom"><span>КОД.<br>ПРАКТИКА.<br>СПІЛЬНОТА.</span><span class="poster-date">12<span>ГРУДНЯ</span></span></div>
+            <div class="poster-strip"><span>MAKE SOMETHING REAL</span><span aria-hidden="true">✳</span><span>KYIV, UA</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="topic-band" aria-label="Теми зустрічі">
+      <div class="container d-flex flex-wrap justify-content-between gap-3"><span>HTML + CSS</span><span aria-hidden="true">✳</span><span>BOOTSTRAP 5</span><span aria-hidden="true">✳</span><span>JAVASCRIPT</span><span aria-hidden="true">✳</span><span>AI У РОЗРОБЦІ</span></div>
+    </div>
+
+    <section class="container booking-section" id="tickets" aria-labelledby="booking-title">
+      <div class="section-heading d-flex flex-wrap align-items-end justify-content-between gap-3">
+        <div><p class="eyebrow">ТВОЄ МІСЦЕ СЕРЕД СВОЇХ</p><h2 id="booking-title">Побачимось на події<span class="orange">?</span></h2></div>
+        <p class="section-intro">Приходь із друзями —<br>разом вигідніше.</p>
+      </div>
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <section class="booking-card" aria-labelledby="calculator-title">
+            <div class="card-heading"><span class="step-number">01</span><h3 id="calculator-title">Розрахуй вартість</h3></div>
+            <form id="ticket-form" novalidate>
+              <fieldset>
+                <legend class="form-label">Категорія квитка</legend>
+                <div class="row g-3">
+                  <div class="col-6">
+                    <input class="btn-check" type="radio" name="category" id="standard" value="standard" checked>
+                    <label class="ticket-option" for="standard"><span class="ticket-option-top"><strong>Standard</strong><span class="radio-mark" aria-hidden="true"></span></span><span class="ticket-price">400 <small>грн</small></span><span class="ticket-description">Участь у події</span></label>
+                  </div>
+                  <div class="col-6">
+                    <input class="btn-check" type="radio" name="category" id="vip" value="vip">
+                    <label class="ticket-option" for="vip"><span class="ticket-option-top"><strong>VIP <span class="orange" aria-hidden="true">✳</span></strong><span class="radio-mark" aria-hidden="true"></span></span><span class="ticket-price">800 <small>грн</small></span><span class="ticket-description">Участь + сесія запитань</span></label>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="row g-3 mt-2">
+                <div class="col-sm-5">
+                  <label class="form-label" for="ticket-count">Кількість квитків</label>
+                  <input class="form-control" id="ticket-count" name="tickets" type="number" min="1" step="1" value="1" required aria-describedby="ticket-count-error">
+                  <div class="invalid-feedback" id="ticket-count-error">Введіть цілу кількість квитків, більшу за нуль.</div>
+                </div>
+                <div class="col-sm-7">
+                  <label class="form-label" for="promo-code">Промокод <span class="optional">· необов’язково</span></label>
+                  <input class="form-control" id="promo-code" name="promo" type="text" placeholder="Наприклад, EVENT50" maxlength="40" aria-describedby="promo-help" autocomplete="off" spellcheck="false">
+                  <div class="form-text" id="promo-help">EVENT50 — ще мінус 50 грн.</div>
+                </div>
+              </div>
+              <div class="discount-note"><span aria-hidden="true">↗</span> 3–4 квитки: <strong>−10%</strong><span class="discount-divider" aria-hidden="true">/</span>від 5 квитків: <strong>−20%</strong></div>
+              <button class="btn btn-dark w-100" type="submit">Розрахувати <span aria-hidden="true">↗</span></button>
+            </form>
+            <div id="calculation-message" class="alert mt-3 mb-0" role="status" aria-live="polite" hidden></div>
+            <p id="calculation-pending" class="form-text mt-3 mb-0" role="status" hidden>Дані змінено. Натисніть «Розрахувати», щоб оновити суму.</p>
+            <div id="order-summary" class="order-summary" role="status" aria-live="polite" aria-atomic="true">
+              <div class="summary-kicker">ТВОЄ ЗАМОВЛЕННЯ <span id="summary-category">STANDARD</span></div>
+              <dl class="mb-0">
+                <div class="summary-line"><dt>Квитки <span id="summary-multiplication">1 × 400 грн</span></dt><dd id="subtotal">400 грн</dd></div>
+                <div class="summary-line"><dt>Знижка за кількість <span id="discount-percent">0%</span></dt><dd id="quantity-discount">0 грн</dd></div>
+                <div class="summary-line"><dt>Промокод <span id="summary-promo">не застосовано</span></dt><dd id="promo-discount">0 грн</dd></div>
+                <div class="summary-total"><dt>До сплати</dt><dd id="total-price">400 <small>грн</small></dd></div>
+              </dl>
+              <p class="summary-caption">Промокод застосовується після відсоткової знижки.</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="col-lg-5">
+          <section class="booking-card registration-card" id="registration" aria-labelledby="registration-title">
+            <div class="card-heading"><span class="step-number">02</span><h3 id="registration-title">Долучайся до нас</h3></div>
+            <p class="card-description">Залиш свої дані та кількість учасників.</p>
+            <form id="registration-form" novalidate>
+              <div class="mb-3"><label class="form-label" for="participant-name">Ім’я</label><input class="form-control" id="participant-name" name="name" type="text" placeholder="Твоє ім’я" autocomplete="given-name" required aria-describedby="name-error"><div class="invalid-feedback" id="name-error">Вкажіть своє ім’я.</div></div>
+              <div class="mb-3"><label class="form-label" for="participant-email">Email</label><input class="form-control" id="participant-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required aria-describedby="email-error"><div class="invalid-feedback" id="email-error">Вкажіть коректний email, наприклад you@example.com.</div></div>
+              <div class="mb-4"><label class="form-label" for="participant-count">Кількість учасників</label><input class="form-control" id="participant-count" name="participants" type="number" min="1" step="1" value="1" required aria-describedby="participants-error"><div class="invalid-feedback" id="participants-error">Введіть цілу кількість учасників, більшу за нуль.</div></div>
+              <button class="btn btn-accent w-100" type="submit">Зареєструватися <span aria-hidden="true">↗</span></button>
+            </form>
+            <div id="registration-message" class="alert mt-3 mb-0" role="status" aria-live="polite" hidden></div>
+            <p class="privacy-note">Демонстраційна реєстрація: дані перевіряються лише у браузері, не зберігаються та не надсилаються. Оплата не здійснюється.</p>
+          </section>
+          <div class="small-note"><span class="note-star" aria-hidden="true">✳</span><p>Перший сайт починається<br>з першого кроку. Зроби його тут.</p></div>
+        </div>
+      </div>
+    </section>
+    <noscript><div class="container alert alert-warning">Увімкніть JavaScript, щоб перевірити форму та розрахувати вартість квитків.</div></noscript>
+  </main>
+  <footer class="container site-footer d-flex flex-wrap justify-content-between gap-3"><a class="brand" href="#">frontend day<span class="orange">.</span></a><span>Навчальний проєкт · Bootstrap 5 + JavaScript</span><span>Зроблено з цікавістю ↗</span></footer>
+</body>
+</html>
