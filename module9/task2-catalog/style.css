@@ -1,0 +1,260 @@
+/* ===== Базові налаштування ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1e293b;
+  background-color: #f1f5f9;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Приховати заголовок візуально, але залишити для скрінрідерів */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* ===== Шапка та меню ===== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+.header__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.logo span {
+  color: #38bdf8;
+}
+
+.nav__list {
+  display: flex;
+  gap: 8px;
+}
+
+.nav__link {
+  display: block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  background-color: #1e3a8a;
+}
+
+/* Чекбокс і бургер на комп'ютері не показуємо */
+.nav-toggle,
+.burger {
+  display: none;
+}
+
+/* ===== Заголовок сторінки ===== */
+.page-title {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  color: #64748b;
+  margin-bottom: 32px;
+}
+
+/* ===== Каталог: CSS Grid ===== */
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* комп'ютер: 3 картки */
+  gap: 24px;
+}
+
+/* ===== Картка товару: Flexbox ===== */
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;            /* нічого не вилазить за заокруглені кути */
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
+}
+
+.product__image {
+  display: block;
+  width: 100%;                 /* зображення не ширше за картку */
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.product__body {
+  flex-grow: 1;                /* тіло займає всю висоту, що лишилась */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.product__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.product__text {
+  color: #64748b;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+
+.product__price {
+  margin-top: auto;            /* ціна і кнопка притискаються донизу */
+  margin-bottom: 16px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.product__button {
+  display: block;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #2563eb;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.product__button:hover {
+  background-color: #1d4ed8;
+}
+
+/* ===== Підвал ===== */
+.footer {
+  padding: 24px 20px;
+  text-align: center;
+  color: #94a3b8;
+  background-color: #0f172a;
+}
+
+/* ===== Планшет: 2 картки ===== */
+@media (max-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Телефон: 1 картка + бургер-меню ===== */
+@media (max-width: 640px) {
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 28px;
+  }
+
+  /* Показуємо кнопку-бургер */
+  .burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+  }
+
+  /* Три смужки: span + псевдоелементи */
+  .burger span,
+  .burger span::before,
+  .burger span::after {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    position: relative;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+
+  .burger span::before,
+  .burger span::after {
+    content: "";
+    position: absolute;
+  }
+
+  .burger span::before { top: -8px; }
+  .burger span::after  { top: 8px; }
+
+  /* Меню займає весь рядок під логотипом і сховане */
+  .nav {
+    width: 100%;
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    padding-top: 12px;
+  }
+
+  /* Коли чекбокс увімкнено — показуємо меню */
+  .nav-toggle:checked ~ .nav {
+    display: block;
+  }
+
+  /* Бургер перетворюється на хрестик */
+  .nav-toggle:checked + .burger span {
+    background-color: transparent;
+  }
+
+  .nav-toggle:checked + .burger span::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-toggle:checked + .burger span::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}

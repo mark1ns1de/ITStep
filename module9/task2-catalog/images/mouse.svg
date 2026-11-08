@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Мишка</title>
+  <rect width="400" height="300" fill="#fecaca"/>
+  <rect x="140" y="50" width="120" height="200" rx="60" fill="#7f1d1d"/><line x1="200" y1="50" x2="200" y2="130" stroke="#fecaca" stroke-width="6"/><rect x="192" y="80" width="16" height="34" rx="8" fill="#ef4444"/>
+</svg>

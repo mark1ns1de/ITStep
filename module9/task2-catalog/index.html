@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GadgetHub — каталог гаджетів</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="#">Gadget<span>Hub</span></a>
+
+      <!-- Бургер без JavaScript: прихований чекбокс + label -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="burger" for="nav-toggle" aria-label="Відкрити меню">
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link nav__link--active" href="#catalog">Каталог</a></li>
+          <li><a class="nav__link" href="#">Знижки</a></li>
+          <li><a class="nav__link" href="#">Доставка</a></li>
+          <li><a class="nav__link" href="#">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="catalog">
+    <h1 class="page-title">Каталог гаджетів</h1>
+    <p class="page-subtitle">Популярні товари з доставкою по всій Україні</p>
+
+    <section class="catalog">
+      <h2 class="visually-hidden">Товари</h2>
+      <article class="product">
+        <img class="product__image" src="images/headphones.svg" alt="Бездротові навушники" width="400" height="300">
+        <div class="product__body">
+          <h3 class="product__title">Бездротові навушники</h3>
+          <p class="product__text">Активне шумозаглушення, до 30 годин роботи та швидка зарядка через USB-C.</p>
+          <p class="product__price">2 499 ₴</p>
+          <a class="product__button" href="#">Купити</a>
+        </div>
+      </article>
+      <article class="product">
+        <img class="product__image" src="images/watch.svg" alt="Смарт-годинник" width="400" height="300">
+        <div class="product__body">
+          <h3 class="product__title">Смарт-годинник</h3>
+          <p class="product__text">Пульсометр, GPS, сповіщення зі смартфона.</p>
+          <p class="product__price">3 999 ₴</p>
+          <a class="product__button" href="#">Купити</a>
+        </div>
+      </article>
+      <article class="product">
+        <img class="product__image" src="images/speaker.svg" alt="Bluetooth-колонка" width="400" height="300">
+        <div class="product__body">
+          <h3 class="product__title">Bluetooth-колонка</h3>
+          <p class="product__text">Потужний звук 20 Вт, захист від води IPX7 і 12 годин музики без підзарядки. Підходить для походів і вечірок.</p>
+          <p class="product__price">1 799 ₴</p>
+          <a class="product__button" href="#">Купити</a>
+        </div>
+      </article>
+      <article class="product">
+        <img class="product__image" src="images/keyboard.svg" alt="Механічна клавіатура" width="400" height="300">
+        <div class="product__body">
+          <h3 class="product__title">Механічна клавіатура</h3>
+          <p class="product__text">Тихі перемикачі, RGB-підсвітка та алюмінієвий корпус.</p>
+          <p class="product__price">2 899 ₴</p>
+          <a class="product__button" href="#">Купити</a>
+        </div>
+      </article>
+      <article class="product">
+        <img class="product__image" src="images/mouse.svg" alt="Ігрова мишка" width="400" height="300">
+        <div class="product__body">
+          <h3 class="product__title">Ігрова мишка</h3>
+          <p class="product__text">Сенсор 16 000 DPI, 6 програмованих кнопок.</p>
+          <p class="product__price">1 299 ₴</p>
+          <a class="product__button" href="#">Купити</a>
+        </div>
+      </article>
+      <article class="product">
+        <img class="product__image" src="images/camera.svg" alt="Екшн-камера" width="400" height="300">
+        <div class="product__body">
+          <h3 class="product__title">Екшн-камера</h3>
+          <p class="product__text">Відео 4K, стабілізація та водонепроникний бокс до 30 м у комплекті.</p>
+          <p class="product__price">5 499 ₴</p>
+          <a class="product__button" href="#">Купити</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 GadgetHub. Навчальний проєкт IT Step, модуль 9.</p>
+  </footer>
+</body>
+</html>

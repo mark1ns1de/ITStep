@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <title>Клавіатура</title>
+  <rect width="400" height="300" fill="#e9d5ff"/>
+  <rect x="50" y="100" width="300" height="120" rx="14" fill="#3b0764"/><g fill="#c084fc"><rect x="66" y="116" width="28" height="24" rx="4"/><rect x="102" y="116" width="28" height="24" rx="4"/><rect x="138" y="116" width="28" height="24" rx="4"/><rect x="174" y="116" width="28" height="24" rx="4"/><rect x="210" y="116" width="28" height="24" rx="4"/><rect x="246" y="116" width="28" height="24" rx="4"/><rect x="282" y="116" width="52" height="24" rx="4"/><rect x="66" y="148" width="40" height="24" rx="4"/><rect x="114" y="148" width="28" height="24" rx="4"/><rect x="150" y="148" width="28" height="24" rx="4"/><rect x="186" y="148" width="28" height="24" rx="4"/><rect x="222" y="148" width="28" height="24" rx="4"/><rect x="258" y="148" width="76" height="24" rx="4"/><rect x="110" y="180" width="180" height="24" rx="4"/></g>
+</svg>
