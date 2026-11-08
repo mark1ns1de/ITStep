@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Реєстрація (версія З ПОМИЛКАМИ)</title>
+</head>
+<body>
+  <!-- УВАГА: цей файл навмисно містить 3 HTML-помилки. Виправлена версія — index.html -->
+  <main>
+    <h1>Реєстрація на онлайн-курс</h1>
+    <form action="#" method="post">
+      <p>
+        <label for="first-name">Ім'я</label>
+        <input type="text" id="first-name" name="first_name" required>
+        <!-- ПОМИЛКА 1: блоковий div всередині абзацу p -->
+        <div>Ім'я має містити щонайменше 2 літери</div>
+      </p>
+
+      <label for="last-name">Прізвище</label>
+      <input type="text" id="last-name" name="last_name" required>
+
+      <!-- ПОМИЛКА 2: label вказує на id="email", а в поля id="mail" -->
+      <label for="email">Email</label>
+      <input type="email" id="mail" name="email" required>
+
+      <label for="age">Вік</label>
+      <input type="number" id="age" name="age" min="14" max="99">
+
+      <label for="direction">Напрям</label>
+      <select id="direction" name="direction" required>
+        <option value="">— Оберіть —</option>
+        <option value="frontend">Frontend</option>
+      </select>
+
+      <fieldset>
+        <legend>Формат навчання</legend>
+        <!-- ПОМИЛКА 3: однаковий id у двох радіокнопок -->
+        <input type="radio" id="format" name="format" value="online" required>
+        <label for="format">Онлайн</label>
+        <input type="radio" id="format" name="format" value="offline">
+        <label for="format">Офлайн</label>
+      </fieldset>
+
+      <label for="comment">Коментар</label>
+      <textarea id="comment" name="comment"></textarea>
+
+      <button type="submit">Зареєструватися</button>
+    </form>
+  </main>
+</body>
+</html>

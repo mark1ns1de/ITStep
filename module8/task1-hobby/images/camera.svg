@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <title>Плівковий фотоапарат</title>
+  <rect width="480" height="300" fill="#e8f1f8"/>
+  <!-- корпус -->
+  <rect x="70" y="80" width="340" height="170" rx="18" fill="#2f3640"/>
+  <rect x="70" y="120" width="340" height="90" fill="#4b5563"/>
+  <!-- верхня частина -->
+  <rect x="180" y="50" width="120" height="40" rx="8" fill="#2f3640"/>
+  <rect x="100" y="62" width="50" height="22" rx="4" fill="#c0392b"/>
+  <!-- об'єктив -->
+  <circle cx="240" cy="165" r="70" fill="#1e272e"/>
+  <circle cx="240" cy="165" r="52" fill="#3c6382"/>
+  <circle cx="240" cy="165" r="30" fill="#0a3d62"/>
+  <circle cx="222" cy="147" r="10" fill="#ffffff" opacity="0.7"/>
+  <!-- спалах -->
+  <rect x="340" y="95" width="45" height="25" rx="4" fill="#f5f6fa"/>
+</svg>
